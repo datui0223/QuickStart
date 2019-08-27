@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorF2"
+    >
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="172dp"
+        android:layout_height="172dp"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中国移动2000元话费卡"
+        android:textSize="12sp"
+        android:layout_marginLeft="12dp"
+        />
+    <TextView
+        android:id="@+id/tv_prince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="价格：0.00元"
+        android:textSize="10sp"
+        android:layout_marginLeft="12dp"
+        />
+</LinearLayout>

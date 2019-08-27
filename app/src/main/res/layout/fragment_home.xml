@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shehuan.statusview.StatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sv_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/sfl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/sbs_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:fillViewport="true">
+                <!--遇到某一个控件不想获取焦点问题可以让其他控件获取焦点-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.stx.xhb.xbanner.XBanner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        app:AutoPlayTime="3000"
+                        app:isAutoPlay="true"
+                        app:isShowIndicatorOnlyOne="false"
+                        app:isShowNumberIndicator="false"
+                        app:isShowTips="true"
+                        app:isTipsMarquee="false"
+                        app:pageChangeDuration="800"
+                        app:placeholderDrawable="@drawable/ic_launcher_background"
+                        app:pointsContainerBackground="#442e2e2e"
+                        app:pointsPosition="RIGHT"
+                        app:tipTextSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorAccent">
+
+                        <TextView
+                            android:id="@+id/tv_get"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="GET" />
+
+                        <TextView
+                            android:id="@+id/tv_post"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="POST" />
+
+                        <TextView
+                            android:id="@+id/tv_put"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="PUT" />
+
+                        <TextView
+                            android:id="@+id/tv_load"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="LOAD" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_main_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/sb_home"
+                        android:layout_width="80dp"
+                        android:layout_height="6dp"
+                        android:scrollbars="horizontal"
+                        android:progress="0"
+                        android:splitTrack="false"
+                        android:max="100"
+                        android:thumb="@drawable/shape_circle"
+                        android:progressDrawable="@drawable/layer_progress"
+                        android:thumbOffset="0dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <include
+            layout="@layout/base_title"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fa_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/umeng_socialize_share_web"
+        android:backgroundTint="@color/colorPrimary"
+        />
+</com.shehuan.statusview.StatusView>
