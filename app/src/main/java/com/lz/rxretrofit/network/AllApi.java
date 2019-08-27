@@ -34,11 +34,11 @@ public interface AllApi {
      * @param userBean
      * @return
      */
-    String BASE_URL = "";
-    String TESTNURL = "";
-    String testUrlName = "";
-    String TEST2NURL = "";
-    String test2UrlName = "";
+    String BASE_URL = "https://uat-wap.mihangmall.com";
+    String TESTNURL = "https://xiaoshu.moshield.cn";
+    String testUrlName = "urlname:testUrl";
+    String TEST2NURL = "http://192.168.2.66:8080";
+    String test2UrlName = "urlname:test2Url";
 
 
     @POST("/auth/tokens")
